@@ -1,0 +1,11 @@
+
+*.pyc
+.DS_store
+.git
+.sass-cache/
+.stylelintrc
+bower_components/
+data/mongodb_data/
+docs/.ipynb_checkpoints
+node_modules/
+npm-debug.log
