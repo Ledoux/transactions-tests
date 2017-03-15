@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "main": "lib/index.js",
-  "name": "transactionx-tests",
+  "name": "transactions-tests",
   "scripts": {
     "compile": "./node_modules/.bin/babel --presets es2015,latest -d lib/ src/",
     "dev": "nodemon --watch src --exec \"npm run compile\""
