@@ -9,3 +9,4 @@ data/mongodb_data/
 docs/.ipynb_checkpoints
 node_modules/
 npm-debug.log
+yarn-error.log

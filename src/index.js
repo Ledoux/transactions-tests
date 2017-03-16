@@ -40,4 +40,19 @@ export const allTestDeepEquals = [].concat(
   deletedTestDeepEquals
 )
 
-export const JOIN_FIRST_TEST_API_URL = `${FIRST_TEST_API_URL}?${encodeQuery(gotTestQuery)}`
+export function getTestsWithPostDocuments (documents) {
+  return [documents[0].txt]
+}
+export function getTestsWithGetDocuments (documents) {
+  return [
+    documents[0].txt,
+    documents[0].myFaa.txt,
+    documents[1].theFaas[0].txt
+  ]
+}
+export function getTestsWithPutDocuments (documents) {
+  return [documents[0].txt]
+}
+export function getTestsWithDeleteDocuments (documents) {
+  return [documents.length]
+}
