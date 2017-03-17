@@ -29,20 +29,11 @@ export const putTestUpdate = {$set: {txt: 'Guten Tag'}}
 
 export const deletedTestQuery = { number: 43 }
 
-export const postedTestDeepEquals = ['hello']
-export const gotTestDeepEquals = ['hello', 'molky is fun. A lot.', 'Karl Marx Landers']
-export const putTestDeepEquals = ['Guten Tag']
-export const deletedTestDeepEquals = [2]
-export const allTestDeepEquals = [].concat(
-  postedTestDeepEquals,
-  gotTestDeepEquals,
-  putTestDeepEquals,
-  deletedTestDeepEquals
-)
-
 export function getTestsWithPostDocuments (documents) {
   return [documents[0].txt]
 }
+export const postedTestDeepEquals = ['hello']
+
 export function getTestsWithGetDocuments (documents) {
   return [
     documents[0].txt,
@@ -50,9 +41,44 @@ export function getTestsWithGetDocuments (documents) {
     documents[1].theFaas[0].txt
   ]
 }
+export const gotTestDeepEquals = [
+  'hello',
+  'molky is fun. A lot.',
+  'Karl Marx Landers'
+]
+
 export function getTestsWithPutDocuments (documents) {
   return [documents[0].txt]
 }
+export const putTestDeepEquals = ['Guten Tag']
+
 export function getTestsWithDeleteDocuments (documents) {
   return [documents.length]
 }
+export const deletedTestDeepEquals = [2]
+
+
+export function getTestsWithGetMergedDocuments (documents) {
+  return [
+    documents[0].myFaaId, documents[0].yourFaaId,
+    documents[1].faaId, documents[1].theFaaIds
+  ]
+}
+export const getMergedTestDeepEquals = [
+  '58d2a5818975fd0893fc8b6e', '58d2a5818975fd0893fc8b6c',
+  '58d2a5818975fd0893fc8b6b', ['58d2a5818975fd0893fc8b6b', '58d2a5818975fd0893fc8b6e']
+]
+
+export const allTestDeepEquals = [].concat(
+  postedTestDeepEquals,
+  gotTestDeepEquals,
+  putTestDeepEquals,
+  deletedTestDeepEquals
+)
+
+export const allMergedTestDeepEquals = [].concat(
+  postedTestDeepEquals,
+  getMergedTestDeepEquals,
+  putTestDeepEquals,
+  deletedTestDeepEquals
+)
