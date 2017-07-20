@@ -1,11 +1,12 @@
-export const TEST_MONGO_URL = 'mongodb://localhost/transactionx-express-test'
+export const TEST_MONGO_URL = 'mongodb://localhost/transactions-express-test'
 export const FIRST_TEST_COLLECTION_NAME = 'foos'
 export const SECOND_TEST_COLLECTION_NAME = 'faas'
-export const TEST_PORT = 5000
-export const TEST_EXPRESS_URL = `http://0.0.0.0:${TEST_PORT}`
 export const TEST_PATH = '/api'
-export const FIRST_TEST_API_URL = `${TEST_EXPRESS_URL}${TEST_PATH}/${FIRST_TEST_COLLECTION_NAME}`
-export const SECOND_TEST_API_URL = `${TEST_EXPRESS_URL}${TEST_PATH}/${SECOND_TEST_COLLECTION_NAME}`
+export const TEST_PORT = 5001
+export const TEST_EXPRESS_URL = `http://0.0.0.0:${TEST_PORT}`
+export const TEST_API_URL = `${TEST_EXPRESS_URL}${TEST_PATH}`
+export const FIRST_TEST_API_URL = `${TEST_API_URL}/${FIRST_TEST_COLLECTION_NAME}`
+export const SECOND_TEST_API_URL = `${TEST_API_URL}/${SECOND_TEST_COLLECTION_NAME}`
 
 // POST TEST
 export const postedFirstTestDocuments = [
